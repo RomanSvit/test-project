@@ -1,0 +1,39 @@
+.main-block{
+    width: 212px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+.matrix{
+    width: 160px;
+    height: auto;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cell{
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+}
+.total{
+    width: 50px;
+    height: 156px;
+    border: 1px solid black;
+}
+.mean{
+    width: 210px;
+    height: 50px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.add-btn{
+    width: 80px;
+}
+.del-btn{
+    width: 80px;
+}
