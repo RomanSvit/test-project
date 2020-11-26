@@ -5,68 +5,45 @@ const int = function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 };
+
 const initialState = {
   mean: 0,
   total: 0,
-  cell: [
-    {
-      id: 1,
-      amount: int(100, 1000),
-    },
-    {
-      id: 2,
-      amount: int(100, 1000),
-    },
-    {
-      id: 3,
-      amount: int(100, 1000),
-    },
-    {
-      id: 4,
-      amount: int(100, 1000),
-    },
-    {
-      id: 5,
-      amount: int(100, 1000),
-    },
-    {
-      id: 6,
-      amount: int(100, 1000),
-    },
-    {
-      id: 7,
-      amount: int(100, 1000),
-    },
-    {
-      id: 8,
-      amount: int(100, 1000),
-    },
-    {
-      id: 9,
-      amount: int(100, 1000),
-    },
-  ],
+  m: 3,
+  n: 3,
+  matrix: [],
 };
+for (let i = 0; i < initialState.m; i++) {
+  if (initialState.matrix[i] === undefined) {
+    initialState.matrix[i] = [];
+  }
+  for (let j = 0; j < initialState.n; j++) {
+    initialState.matrix[i][j] = { id: i + "" + j, amount: int(100, 1000) };
+  }
+}
+// console.log(initialState.matrix);
 
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case Type.INCREMENT:
-      console.log(state.cell);
-      return { ...state };
-    case Type.ADD_STR:
-      const newItem = {
-        id: state.cell.length + payload,
-        amount: int(100, 1000),
+      const id = payload.id;
+      const element = state.matrix.find((elem) =>
+        elem.find((elem) => elem.id === id)
+      );
+      const currentElem = element.find((el) => el.id === id);
+      const idx = element.findIndex((elem) => elem.id === id);
+      element[idx] = {
+        ...currentElem,
+        amount: currentElem.amount + 1,
       };
       return {
         ...state,
-        cell: [...state.cell, newItem],
+        matrix: [...state.matrix],
       };
+    case Type.ADD_STR:
+      return { ...state, m: state.m + payload };
     case Type.DEL_STR:
-      const idElem = state.cell.length;
-      const newCell = state.cell.filter((elem) => elem.id !== idElem);
-      console.log(newCell)
-      return { ...state, cell: [...newCell] };
+      return { ...state, m: state.m - payload };
     default:
       return state;
   }

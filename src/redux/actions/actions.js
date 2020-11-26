@@ -4,15 +4,19 @@ export const Type = {
   DEL_STR: "DEL_STR",
 };
 
-export const increment = () => ({
+export const increment = (e) => ({
   type: Type.INCREMENT,
-  payload: 1,
+  payload: {
+    elem: e.target,
+    id: e.target.id,
+  },
 });
 
-export const addStr = (id) => ({
+export const addStr = () => ({
   type: Type.ADD_STR,
-  payload:  1,
+  payload: 1,
 });
 export const delStr = () => ({
   type: Type.DEL_STR,
+  payload: 1,
 });
