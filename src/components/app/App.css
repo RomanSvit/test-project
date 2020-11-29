@@ -1,39 +1,41 @@
-.main-block{
-    width: 212px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 40px auto;
+.main-block {
+  /* width: 1200px; */
+  margin: 40px auto;
 }
-.matrix{
-    width: 205px;
-    height: auto;
-    margin: 0;
-    margin-bottom: 10px;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+.wrapper {
+  display: flex;
 }
-.cell{
-    list-style: none;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    text-align: center;
+.total {
+  display: block;
+  width: 180px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
 }
-.total{
-    width: 50px;
-    height: 156px;
-    border: 1px solid black;
+.mean {
+  display: block;
+  width: 180px;
+  height: 50px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  text-align: center;
 }
-.mean{
-    width: 210px;
-    height: 50px;
-    border: 1px solid black;
-    margin-bottom: 10px;
+.block-btn {
+  display: flex;
+  flex-direction: column;
 }
-.add-btn{
-    width: 80px;
+.btn {
+  width: 120px;
+  text-transform: uppercase;
+  background-color: hsl(224, 20%, 22%);
+  color: #ffffff;
+  border-radius: 4px;
+  line-height: 3;
 }
-.del-btn{
-    width: 80px;
+.add-btn {
+  margin-bottom: 5px;
 }
+.add-btn:hover,
+.del-btn:hover{
+  transform: scale(1.1);
+} 

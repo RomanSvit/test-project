@@ -1,0 +1,13 @@
+.block-cell-mean {
+  display: flex;
+}
+.cell-mean {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 5;
+  background-color: rgba(103, 243, 133, 0.945);
+  margin-right: 10px;
+}

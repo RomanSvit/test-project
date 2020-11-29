@@ -21,7 +21,7 @@ html {
  */
 
 body {
-  margin: 0;
+  margin: 0 auto;
 }
 
 /**
@@ -187,7 +187,11 @@ button,
 select { /* 1 */
   text-transform: none;
 }
-
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
@@ -346,4 +350,7 @@ template {
 
 [hidden] {
   display: none;
+}
+#root{
+  display: flex;
 }

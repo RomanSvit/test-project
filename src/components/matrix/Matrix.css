@@ -1,0 +1,31 @@
+.matrix {
+  width: auto;
+  height: auto;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cell {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 5;
+  background-color: rgba(157, 241, 241, 0.836);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.cell.show {
+  background-color: rgba(219, 241, 157, 0.836);
+}
+.perc-cell {
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 20px;
+  background-color: brown;
+}
